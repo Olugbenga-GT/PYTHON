@@ -7,7 +7,14 @@ def play_guess_game():
 
     while number != guessed_number:
         number = randint(1, 10)
-        guessed_number =int(input("Guess your number" + "\n"))
+        try:
+            guessed_number =int(input("Guess a number between 1 t0 10" + "\n"))
+        except:
+            print("Na number guesser game na! Guy enter number jare" + "\n")
+        if(guessed_number < 1 or guessed_number > 10):
+            print("Your number has to be between 1 and 10")
+            break
+
         if(number == guessed_number):
            print (f"The correct number is {number} and your guess is {guessed_number}. Congrats! you won!")
         else:
