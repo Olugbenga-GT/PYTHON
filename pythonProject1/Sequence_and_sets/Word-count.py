@@ -1,3 +1,5 @@
+
+
 speech = ("this is a sample text with several words in which"
           " i am not sure i have repeated any word even though"
           " there are several words in "
@@ -14,3 +16,7 @@ print(f'{"Word":<12}Count')
 
 for word, count in sorted(speech_count.items()):
     print(f'{word:<12}{count}')
+
+print(f'There is a-whole-nother way of doing this')
+
+# Alternative way: Using the Python Counter
